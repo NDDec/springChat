@@ -10,7 +10,8 @@
 <body>
 <h1>欢迎管理员登录！</h1>
 <center>
-    <h1>主界面</h1><br>
+    <h1>主界面</h1>
+    <hr>
     <a href="manageSuperUser.html">管理用户</a><br>
     <a href="??">添加用户</a><br>
     <a href="??">查找用户</a><br>
