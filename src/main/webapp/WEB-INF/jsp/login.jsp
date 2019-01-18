@@ -11,6 +11,9 @@
 <center>
     <form action="logincheck.html" method="post">
         <h1>登录界面</h1>
+        <c:if test="${error == 'uptime'}">
+        <h4>登录超时，请重新登录！</h4>
+        </c:if>
         <br>
     用户名:
     <input type="text" name="userName">

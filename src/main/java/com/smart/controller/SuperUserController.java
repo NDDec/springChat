@@ -24,6 +24,9 @@ public class SuperUserController {
     private CookieAndSessionService cookieAndSessionService;
     @RequestMapping(value="/manageSuperUser.html")
     public ModelAndView getUserInfo(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        if(!cookieAndSessionService.judge(request,response)) {
+            return new ModelAndView("login");
+        }
         ModelAndView mav = new ModelAndView("manageSuperUser");
         //每页的记录数
         final Integer numEachPage = 10;
@@ -38,13 +41,13 @@ public class SuperUserController {
         //当前所在页,默认为第一页
         int pageNow = 1;
         String spageNow = request.getParameter("pageNow");
-        pageNow = userService.getPageNow(spageNow,response,numOfPages,pageNow);
-        mav.addObject("numOfPages",numOfPages);
-        mav.addObject("userInfo",users);
-        mav.addObject("numEachPage",numEachPage);
-        mav.addObject("pageNow",pageNow);
-        mav.addObject("ip",ip);
-        mav.addObject("host",host);
+        pageNow = userService.getPageNow(spageNow, response, numOfPages, pageNow);
+        mav.addObject("numOfPages", numOfPages);
+        mav.addObject("userInfo", users);
+        mav.addObject("numEachPage", numEachPage);
+        mav.addObject("pageNow", pageNow);
+        mav.addObject("ip", ip);
+        mav.addObject("host", host);
         return mav;
     }
     @RequestMapping(value="updateUser.html")
@@ -77,12 +80,7 @@ public class SuperUserController {
     }
     @RequestMapping(value="mainSuperUser.html")
     public ModelAndView mainSuperUser(HttpServletRequest request,HttpServletResponse response){
-        if(cookieAndSessionService.judge(request,response)) {
             return new ModelAndView("mainSuperUser");
-        }
-        else{
-            return new ModelAndView("login");
-        }
     }
     @RequestMapping(value="delUser.html")
     public ModelAndView delUser(HttpServletRequest request, HttpServletResponse response){

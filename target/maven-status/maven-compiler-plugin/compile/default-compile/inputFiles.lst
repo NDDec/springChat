@@ -3,6 +3,6 @@
 /home/mi/下载/myChatWebsite/src/main/java/com/smart/service/UserService.java
 /home/mi/下载/myChatWebsite/src/main/java/com/smart/controller/SuperUserController.java
 /home/mi/下载/myChatWebsite/src/main/java/com/smart/domain/UserInfo.java
-/home/mi/下载/myChatWebsite/src/main/java/com/smart/controller/LoginCheckController.java
 /home/mi/下载/myChatWebsite/src/main/java/com/smart/service/CookieAndSessionService.java
 /home/mi/下载/myChatWebsite/src/main/java/com/smart/controller/NormalUserController.java
+/home/mi/下载/myChatWebsite/src/main/java/com/smart/interceptor/LoginInterceptor.java

@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
        http://www.springframework.org/schema/context 
-       http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+       http://www.springframework.org/schema/context/spring-context-4.0.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 	<!-- 扫描controller包，应用Spring的注解 -->
 	<context:component-scan base-package="com.smart.controller"/>
 	<context:component-scan base-package="com.smart.dao"/>
@@ -17,5 +18,13 @@
 		p:viewClass="org.springframework.web.servlet.view.JstlView" 
 		p:prefix="/WEB-INF/jsp/"
 		p:suffix=".jsp"/>
+
+	<!--过滤器，防止用户直接输入url进入网页-->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+			<bean class="com.smart.interceptor.LoginInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
 
 </beans>

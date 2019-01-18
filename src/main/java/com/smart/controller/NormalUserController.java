@@ -14,11 +14,6 @@ public class NormalUserController {
     private CookieAndSessionService cookieAndSessionService;
     @RequestMapping(value="NormalUser.html")
     public String normal(HttpServletRequest request, HttpServletResponse response){
-        if(cookieAndSessionService.judge(request,response)) {
             return "mainNormalUser";
-        }
-        else{
-            return "login";
-        }
     }
 }

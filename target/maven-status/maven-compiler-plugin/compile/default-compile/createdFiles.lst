@@ -1,8 +1,8 @@
 com/smart/service/UserService.class
 com/smart/service/CookieAndSessionService.class
 com/smart/domain/UserInfo.class
-com/smart/controller/LoginCheckController.class
 com/smart/dao/UserDao$2.class
+com/smart/interceptor/LoginInterceptor.class
 com/smart/dao/UserDao$1.class
 com/smart/controller/SuperUserController.class
 com/smart/controller/LoginController.class
