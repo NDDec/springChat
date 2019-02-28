@@ -1,8 +1,8 @@
-/home/mi/下载/myChatWebsite/src/main/java/com/smart/dao/UserDao.java
-/home/mi/下载/myChatWebsite/src/main/java/com/smart/controller/LoginController.java
-/home/mi/下载/myChatWebsite/src/main/java/com/smart/service/UserService.java
-/home/mi/下载/myChatWebsite/src/main/java/com/smart/controller/SuperUserController.java
-/home/mi/下载/myChatWebsite/src/main/java/com/smart/domain/UserInfo.java
-/home/mi/下载/myChatWebsite/src/main/java/com/smart/service/CookieAndSessionService.java
-/home/mi/下载/myChatWebsite/src/main/java/com/smart/controller/NormalUserController.java
-/home/mi/下载/myChatWebsite/src/main/java/com/smart/interceptor/LoginInterceptor.java
+/home/dec/springChat/springChat/src/main/java/com/smart/service/CookieAndSessionService.java
+/home/dec/springChat/springChat/src/main/java/com/smart/domain/UserInfo.java
+/home/dec/springChat/springChat/src/main/java/com/smart/interceptor/LoginInterceptor.java
+/home/dec/springChat/springChat/src/main/java/com/smart/controller/LoginController.java
+/home/dec/springChat/springChat/src/main/java/com/smart/service/UserService.java
+/home/dec/springChat/springChat/src/main/java/com/smart/dao/UserDao.java
+/home/dec/springChat/springChat/src/main/java/com/smart/controller/NormalUserController.java
+/home/dec/springChat/springChat/src/main/java/com/smart/controller/SuperUserController.java

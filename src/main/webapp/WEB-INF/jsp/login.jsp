@@ -14,6 +14,9 @@
         <c:if test="${error == 'uptime'}">
         <h4>登录超时，请重新登录！</h4>
         </c:if>
+        <c:if test="${error == 'identErr'}">
+            <h4>用户名或密码错误，请重新登录！</h4>
+        </c:if>
         <br>
     用户名:
     <input type="text" name="userName">

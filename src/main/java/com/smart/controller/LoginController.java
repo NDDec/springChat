@@ -23,9 +23,11 @@ public class LoginController {
     @RequestMapping(value="/login.html")
     public ModelAndView getLoginPage(HttpServletRequest request,HttpServletResponse response){
         ModelAndView loginPage = new ModelAndView("login");
-        if(request.getParameter("error").equals("uptime")) {
-            loginPage.addObject("error","uptime");
+        if(request.getParameter("error") != null) {
+            if(request.getParameter("error").equals("uptime")) loginPage.addObject("error","uptime");
+            if(request.getParameter("error").equals("identErr")) loginPage.addObject("error","identErr");
         }
+        //对请求字段不添加为空判断可能出现空指针错误
         return loginPage;
     }
 
@@ -48,6 +50,9 @@ public class LoginController {
                 } else if (userService.getIdentity(userName) == 1) {
                     response.sendRedirect("mainSuperUser.html");
                 }
+            }
+            else{
+                response.sendRedirect("login.html?error=identErr");
             }
         }catch (Exception e){
             e.printStackTrace();

@@ -26,7 +26,7 @@ public class CookieAndSessionService {
 
     public void setSession(HttpServletRequest request, HttpServletResponse response, String userName) {
         HttpSession hs = request.getSession(true);
-        hs.setMaxInactiveInterval(6);
+        hs.setMaxInactiveInterval(360);
         hs.setAttribute("name",userName);
     }
 
